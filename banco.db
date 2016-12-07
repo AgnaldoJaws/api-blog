@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `quotes_message` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `text` varchar(255) DEFAULT NULL,
+  `to_id` int(11) DEFAULT NULL,
+  `state` enum('unread','read','archived') DEFAULT 'unread',
+  `data` timestamp NULL DEFAULT CURRENT_TIMESTAMP  
+); 
+
+CREATE TABLE IF NOT EXISTS quotes_register (
+  id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,  
+  company_ids int(11) DEFAULT NULL, 
+  origin_region_id int(11) DEFAULT NULL,
+  cargo_type_id int (11) DEFAULT NULL,
+  transport_type_ids int(11) DEFAULT NULL,
+  volume varchar (250) DEFAULT NULL,
+  weight float (50) DEFAULT NULL,
+  comments varchar (1024) DEFAULT NULL,
+  title varchar (100) DEFAULT NULL  
+);
+
+
